@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <title>משתלטים על טקס הדלקת המשואות</title>
+  <link rel="stylesheet" href="css/myStyles.css">
+   <script data-main="js/main.js" src="js/require.js"></script>
+  <!---
+  <script src="scripts/compose.js"></script>
+  !-->
+  <!--- <script src="js/require.js"></script> !-->
+</head>
+
+
+<body>
+  <h1>בואו ליצור טקס הדלקת משואות משלכם! </h1>
+  <p></p>
+  <h2>למה שרק הממשלה תשתלט על הטקס? הקלידו כל טקסט שאתם רוצים שהחיילים יצרו, ושתפו את המסר שלכם - לתפארת!</h2>
+  <br><br>
+  <div class="col-lg-6" id="userInput">
+    <div class="input-group">
+      <textarea type="text" id="ta" name="ta" class="form-control" placeholder="הכנס טקסט..." onkeyup="cleanTA('ta')" onkeydown="cleanTA('ta')"></textarea>
+      <span class="input-group-btn">
+       
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+
+   
+    <strong>
+      <div id="status"></div>
+    </strong>
+    
+
+    <p>
+      <div class="ui-btns" id="ui-btns">
+        <button class="btn" id="go-btn" type="button" onclick="imGenerator('ta')" >צור!</button>
+        <button class="btn" id="save-btn" type="button" onclick="saveImg()">שמור למחשב</button>
+      </div>
+    </p>
+
+    <br><br><br>
+    <form class="img-area">
+      <p>
+        <div class="img-out", id="resIm", name="resIm">
+          <strong>
+          <div id="msg" style="display:inline;">
+     
+            Loading, please wait...
+
+         </div>
+         </strong>
+
+        <canvas id="myCanvas" width="1920" height="1080" style="border:1px solid black">
+        </canvas>
+
+        <div id="body" style="display:none;">
+        <!-- everything else -->
+        </div>
+
+        </div>
+      </p>
+    </form>
+    
+</body>
+
+</html>
